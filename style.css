@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
     padding: 0;
@@ -19,7 +19,6 @@ header {
     width: 100%;
     height: 100px;
     background: #fff;
-    padding-left: 10%;
     padding-right: 10%;  
 }
 
@@ -39,7 +38,7 @@ header {
     float: left;
     padding: 30px 30px 30px 30px;
     margin-left: 80px;
-    font-family: 'Roboto regular';
+    font-family: 'Roboto';
 }
 
 .links a {
@@ -48,7 +47,41 @@ header {
     line-height: 28px;
     margin: 0 16px;
     text-decoration: none;
+}
 
+.slide {
+    width: 100%;
+    height: 366px;
+    background-color: #FBDFDB;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+.text {
+    width: 45%;
+    height: auto;
+    float: left;
+    padding: 100px 20px 20px 50px;
+}
+
+.text h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    color: #111111;
+    font-weight: bold;
+}
+
+.text p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 28px;
+    font-family: 'Roboto';
+    opacity: 0.7;
+}
+
+.slide img {
+    float: right;
+    margin: 5% 10% 0 0 ;
 }
 
 
