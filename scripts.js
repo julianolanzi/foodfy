@@ -1,12 +1,11 @@
 const modalOverlay = document.querySelector('.modal-overlay')
 const cards = document.querySelectorAll('.card')
 
-
 for ( let card of cards ) {
     card.addEventListener("click", function(){
-        const videoId = card.getAttribute("id");
+        const cardId = card.getAttribute(".card");
         modalOverlay.classList.add('active')
-        modalOverlay.querySelector("iframe").src = `https://youtube.com/embed/${videoId}`;
+        modalOverlay.querySelector("iframe").src = `${cardId}`;
     })
 }
 
