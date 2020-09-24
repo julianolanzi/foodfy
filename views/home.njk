@@ -1,0 +1,39 @@
+{% extends "layout.njk" %}
+{%block head%}
+    <title>FoodFy - Inicio</title>
+    {%endblock%}
+
+    {% block content %}
+
+        <section class="slide">
+            <section class="text">
+                <h1>As melhores receitas</h1>
+                <p>Aprenda a construir os melhores pratos com receitas criadas por proﬁssionais do mundo inteiro.</p>
+
+            </section>
+            <img src="img/chef.png" alt="">
+        </section>
+
+        <h1>Mais Acessadas</h1>
+
+        <section class="cards">
+
+            {% for item in items %}
+                <div class="card" id="{{item.id}}">
+                    <div class="card-img-container">
+                        <img width="600px" height="280px" src="{{item.image}}" alt="Videos Aulas">
+                    </div>
+                    <div class="card-title">
+                        <p>{{item.title}}</p>
+                    </div>
+                    <div class="card-cheff">
+                        <p>por
+                            {{item.author}}</p>
+                    </div>
+                </div>
+
+                {%endfor%}
+
+            </section>
+
+        {% endblock %}
