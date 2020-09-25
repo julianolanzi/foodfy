@@ -17,7 +17,7 @@ Na função em server.js incluir
 
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon node server.js"
+    "start": "nodemon  server.js"
   },
 
   Instalação do nunjucks --> npm install nunjucks
