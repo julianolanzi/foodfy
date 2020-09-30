@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap">
+        <link rel="stylesheet" href="/admin-style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/bf4a8f5c48.js" crossorigin="anonymous"></script>
+        {% block head %}{% endblock %}
+    </head>
+
+    <body>
+
+        <header>
+            <div class="logo">
+                <a href="/admin">
+                    <img src="/img/logo-admin.png" alt="">
+                </a>
+            </div>
+            <div class="links">
+                <a href="/admin/recipes">Receitas</a>
+                <a href="/admin/chefs">Chefs</a>
+            </div>
+        </header>
+        <section class="container">
+
+        {% block content %}{% endblock %}
+        </section>
+
+        <div class="footer">
+            <p>
+                Todos direitos Reservados / FoodFy</p>
+
+        </div>
+
+        <script src="/scripts.js"></script>
+
+    </body>
+
+</html>
