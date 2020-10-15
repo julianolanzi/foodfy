@@ -89,6 +89,8 @@ h1 {
 }
 .red{
     background-color: var(--delete);
+    margin-top: 25px;
+
 }
 
 
@@ -122,6 +124,7 @@ h1 {
 }
 .card-img img {
     width: 100%;
+    
     height: 111px;
     border-radius: 15px;
     box-shadow: 5px 5px 12px -4px black;    
@@ -185,6 +188,7 @@ h1 {
     border: 1px solid #DDDDDD;
     border-radius: 4px;
     margin-top: 10px;
+    padding-left: 10px;
     
 }
 
@@ -202,9 +206,89 @@ h1 {
     margin-top: 10px;
     background-color: var(--back);
     cursor: pointer;
+    
 }
 
 .item-descricao {
+    font-family: 'Roboto';
     min-height: 200px;
+    width: 100%;
+    height: 49px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    margin-top: 10px;
+    line-height: 20px;
+    padding: 10px;
 }
 
+
+
+.banner-show img {
+    width: 100%;
+    height: 280px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 12px -4px black;
+    margin-bottom: 40px;
+}
+
+.banner-show h1 {
+    font-family: 'Roboto';
+    font-size: 36px;
+    font-weight: bold;
+    color: #111111;
+    text-align: center;
+}
+
+.banner-show p {
+    font-family: 'Roboto Regular';
+    font-size: 20px;
+    color: #777777;
+    text-align: center;
+}
+
+.descripition {
+    width: 100%;
+    height: auto;
+    padding: 50px 0px 50px 0px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+.descripition h2 {
+    font-family: 'Roboto';
+    font-size: 30px;
+    color: #111111;
+    font-weight: bold;
+    
+}
+.descripition ul {
+    padding-left: 20px;
+}
+
+.hidden {
+    display: block;
+}
+
+.ttitle {
+    margin: 25px 0px 25px 0px;
+    display: inline-flex;
+}
+
+.descripition-ct {
+    display: block;
+}
+
+.bts {
+    background-color: #FFF;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 12px;
+    color: #999999;
+    cursor: pointer;
+    text-align: center;
+    
+    padding: 10px 10px 10px 10px;
+}

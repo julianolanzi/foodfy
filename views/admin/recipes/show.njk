@@ -1,0 +1,73 @@
+{% extends "admin/layout.njk" %}
+
+{%block head%}
+    <title>FoodFy -
+        {{recipe.title}}</title>
+    {%endblock%}
+
+    {% block content %}
+        <section class="container-tb">
+            <div class="container-t">
+                <h1>Receita - {{recipe.title}} </h1>
+            </div>
+            <div class="container-bt">
+                
+
+                    <a href="/admin/recipes/{{ recipe.id }}/edit" class="btn"> <i class="fas fa-edit"></i> Editar Receita</a>
+            </div>
+        </section>
+
+        <section class="banner-show">
+
+            <img alt="{{recipe.title}}" src="{{recipe.imagem_url}}" title="{{recipe.title}}">
+            <h1>{{recipe.title}}</h1>
+            <p>por
+                {{recipe.autor}}</p>
+
+        </section>
+
+        <section class="descripition">
+
+            <div class="descripition-ct">
+                <div class="ttitle">
+                    <h2>Ingredientes</h2>
+                    <input type="button" class="bts" id="bra" value="Esconder" onclick="mostra('ra')">
+                </div>
+
+                <div id="ra" class="hidden">
+                    <ul>
+                        {% for ingredients in recipe.ingredients %}
+                            <li>{{ingredients}}</li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="descripition-ct">
+                    <div class="ttitle">
+                        <h2>Modo de Preparo</h2>
+                        <input class="bts" type="button" id="brb" value="Esconder" onclick="mostra('rb')">
+                    </div>
+
+                    <div id="rb" class="hidden">
+
+                        {% for preparation in recipe.preparation %}
+                            <p>{{preparation}}</p>
+                            {%endfor%}
+
+                        </div>
+                    </div>
+
+                    <div class="descripition-ct">
+                        <div class="ttitle">
+                            <h2>Informações adicionais</h2>
+                            <input class="bts" type="button" id="brc" value="Esconder" onclick="mostra('rc')">
+                        </div>
+
+                        <div id="rc" class="hidden">
+                            <p>{{recipe.description}}</p>
+                        </div>
+                    </div>
+                </section>
+
+                {%endblock%}

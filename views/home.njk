@@ -19,17 +19,17 @@
 
         <section class="cards">
 
-            {% for item in items %}
-                <div class="card" id="{{item.id}}">
+            {% for recipe in recipes %}
+                <div class="card" id="{{recipes.id}}">
                     <div class="card-img-container">
-                        <img width="600px" height="280px" src="{{item.image}}" alt="Videos Aulas">
+                        <img width="600px" height="280px" src="{{recipe.imagem_url}}" alt="Videos Aulas">
                     </div>
                     <div class="card-title">
-                        <p>{{item.title}}</p>
+                        <p>{{recipe.title}}</p>
                     </div>
                     <div class="card-cheff">
                         <p>por
-                            {{item.author}}</p>
+                            {{recipe.autor}}</p>
                     </div>
                 </div>
 

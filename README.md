@@ -15,6 +15,9 @@ Adicionando Node Modulos -> npm install express  // cria o node modules e packag
 Reiniciando servidor auto --> npm install -D nodemon // reiniciar servidor automatico
 Na função em server.js incluir 
 
+
+instalando method override -> npm install method-override fun;'ao de put e delete nos forms
+
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon  server.js"

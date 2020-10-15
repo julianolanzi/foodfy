@@ -1,3 +1,53 @@
 {
-  "recipes": []
+  "recipes": [
+    {
+      "imagem_url": "https://img.itdg.com.br/tdg/images/recipes/000/097/249/31980/31980_original.jpg?mode=crop&width=710&height=400",
+      "title": "CHEESECAKE DE CAPPUCCINO",
+      "autor": "Juliano Lanzii",
+      "ingredients": [
+        "1 colher (chá) de canela em pó",
+        "2 xícaras (chá) de biscoito maisena - 200 g",
+        "5 colheres (sopa) de margarina - 60 g"
+      ],
+      "preparation": [
+        "Coloque os biscoitos no copo do processador.",
+        "Bata por 2 minutos ou até obter uma farofa. Junte a margarina (reserve 1 colher das de sopa) e a canela."
+      ],
+      "description": "Em uma tigela refratária pequena, despeje a gelatina e acrescente 5 colheres (sopa) de água. Misture e deixe hidratar por 5 minutos. Em seguida, leve a tigela ao fogo, em banho-maria por 5 minutos ou até a gelatina dissolver. Retire e transfira para o copo do liquidificador. Junte o leite, o cappuccino, o açúcar, o creme de leite e a ricota. Bata por 2 minutos ou até obter uma mistura cremosa. Despeje o recheio sobre a massa, nivelando-o. Leve o cheesecake à geladeira por 3 horas ou até o recheio endurecer.",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "created_at": 1602107428756,
+      "imagem_url": "https://img.itdg.com.br/tdg/images/recipes/000/101/390/34521/34521_original.jpg?mode=crop&width=710&height=400",
+      "ingredients": [
+        "2 xícaras (chá) de Quinoa em Grãos Vitalin",
+        "4 xícaras (chá) de água (para o cozimento)"
+      ],
+      "title": " QUINOA DE FORNO - SEM GLÚTEN",
+      "autor": "Gabriela Pereira",
+      "preparation": [
+        "Cozinhe por 10 minutos a Quinoa em grãos Vitalin na água temperada com sal. Escorra e reserve.",
+        "Refogue por 10 minutos no azeite de oliva, a cebola, o alho, os tomates e a ervilha. Desligue."
+      ],
+      "description": "Leve ao forno pré aquecido por aproximadamente 20 minutos."
+    },
+    {
+      "id": 8,
+      "created_at": 1602720102098,
+      "imagem_url": "https://img.itdg.com.br/tdg/images/recipes/000/097/249/31980/31980_original.jpg?mode=crop&width=710&height=400",
+      "ingredients": [
+        "1 colher (chá) de canela em pó",
+        "2 xícaras (chá) de biscoito maisena - 200 g",
+        "5 colheres (sopa) de margarina - 60 g"
+      ],
+      "title": "    CHEESECAKE DE CAPPUCCINO",
+      "autor": "Juliano Lanziiii",
+      "preparation": [
+        "Coloque os biscoitos no copo do processador.",
+        "Bata por 2 minutos ou até obter uma farofa. Junte a margarina (reserve 1 colher das de sopa) e a canela."
+      ],
+      "description": "Em uma tigela refratária pequena, despeje a gelatina e acrescente 5 colheres (sopa) de água. Misture e deixe hidratar por 5 minutos. Em seguida, leve a tigela ao fogo, em banho-maria por 5 minutos ou até a gelatina dissolver. Retire e transfira para o copo do liquidificador. Junte o leite, o cappuccino, o açúcar, o creme de leite e a ricota. Bata por 2 minutos ou até obter uma mistura cremosa. Despeje o recheio sobre a massa, nivelando-o. Leve o cheesecake à geladeira por 3 horas ou até o recheio endurecer."
+    }
+  ]
 }
