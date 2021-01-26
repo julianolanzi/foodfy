@@ -1,16 +1,15 @@
 {% extends "admin/layout.njk" %}
 
 {%block head%}
-    <title>FoodFy -
-        {{recipe.title}}</title>
+    <title>Admin - {{recipe.title}}</title>
     {%endblock%}
 
     {% block content %}
-        <section class="container-tb">
-            <div class="container-t">
+        <section class="container-topo">
+            <div class="container-title">
                 <h1>Receita - {{recipe.title}} </h1>
             </div>
-            <div class="container-bt">
+            <div class="container-botao">
                 
 
                     <a href="/admin/recipes/{{ recipe.id }}/edit" class="btn"> <i class="fas fa-edit"></i> Editar Receita</a>
@@ -21,14 +20,13 @@
 
             <img alt="{{recipe.title}}" src="{{recipe.imagem_url}}" title="{{recipe.title}}">
             <h1>{{recipe.title}}</h1>
-            <p>por
-                {{recipe.autor}}</p>
+            <p>por - {{recipe.chef_name}}</p>
 
         </section>
 
-        <section class="descripition">
+        <section class="container_datails">
 
-            <div class="descripition-ct">
+            <div class="descripition-recipes">
                 <div class="ttitle">
                     <h2>Ingredientes</h2>
                     <input type="button" class="bts" id="bra" value="Esconder" onclick="mostra('ra')">
@@ -65,8 +63,27 @@
                         </div>
 
                         <div id="rc" class="hidden">
-                            <p>{{recipe.description}}</p>
+                            <p>{{recipe.information}}</p>
                         </div>
+                    </div>
+
+                    <div class="descripition-ct">
+                        <div class="ttitle">
+                            <h2>Tempo de preparo</h2>
+                        </div>
+
+                        <div>
+                            <p>{{recipe.time_preparation}}</p>
+                        </div>
+                    </div>
+                    <div class="descripition-ct">
+                        <div class="ttitle">
+                            <h2>Esse prato serve </h2>
+                        </div>
+                    <div>
+                            <p>{{recipe.eat_people}} Pessoas</p>
+                        </div>
+                        
                     </div>
                 </section>
 

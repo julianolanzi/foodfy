@@ -1,0 +1,101 @@
+{% extends "admin/layout.njk" %}
+
+{%block head%}
+    <title>Admin - Criando receita</title>
+    {%endblock%}
+
+    {% block content %}
+
+        <form action="/admin/recipes" method="POST">
+            <section class="container-topo">
+                <div class="container-title">
+                    <h1>Criando receita</h1>
+                </div>
+                <div class="container-botao">
+                    <button class="btn">
+                        <i class="fas fa-save"></i>
+                        Salvar receita</button>
+                </div>
+            </section>
+
+            <section class="fields">
+                <div class="item">
+                    <p>Imagem da receita</p>
+                    <div>
+                        <input type="text" name="imagem_url" placeholder="http://" value="{{recipe.imagem_url}}">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p>Titulo</p>
+                    <div>
+                        <input type="text" name="title" placeholder="Título" value="{{recipe.title}}">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p>Chef</p>
+                    <div>
+                        <select name="chef">
+                            {%for chef in chefOptions %}
+                                <option value="{{chef.id}}" placeholder="Informe o Chef" {% if chef.chef_id == chef.id %} selected="selected" {% endif %}>
+                                    {{chef.name}}
+                                </option>
+                                {%endfor%}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="timeandprepar">
+                        <div class="item">
+                            <p>Tempo de preparação</p>
+                            <div>
+                                <input type="number" name="time_preparation" placeholder="Tempo de preparação em mim" value="{{time_preparation}}">
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <p>Receita serve quantas pessoas ?</p>
+                            <div>
+                                <input type="number" name="eat_people" placeholder="Numero de pessoas" value="{{eat_people}}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ingredients" class="item">
+                        <p>Ingredientes</p>
+
+                        <div class="ingredient">
+
+                            <input type="text" name="ingredients[]" placeholder="Ingrediente" value="{{ingredient}}"/>
+
+                        </div>
+
+                    </div>
+                    <button type="button" class="add-input" name="ingredient">Adicionar Ingrediente</button>
+
+                    <div id="preparation" class="item">
+                        <p>Preparação</p>
+
+                        <div class="step">
+                            <input type="text" name="preparation[]" placeholder="Passo" value="{{preparation}}"/>
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="add-input" name="step">Aicionar novo passo</button>
+
+                    <div class="item">
+                        <p>Informações adicionais</p>
+                        <div>
+                            <textarea class="item-descricao" type="text" name="information" cols="30" rows="10">
+                                {{recipe.information}}
+                            </textarea>
+                        </div>
+                    </div>
+
+                </section>
+
+            </form>
+
+            {%endblock%}

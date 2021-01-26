@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <title>FoodFy - O melhor site de Receitas sss.</title>
+         {% block head %}{% endblock %}
     </head>
 
     <body>
@@ -22,7 +22,8 @@
                 <div class="links">
                     <a href="/about">Sobre</a>
                     <a href="/recipes">Receitas</a>
-                    <a href="/admin/recipes">Admin</a>
+                    <a href="/chefs">Chefs</a>
+                    
                 </div>
             </header>
 
@@ -30,21 +31,11 @@
 
         </section>
 
-        <div class="modal-overlay">
-            <div class="modal">
-                <a class="close-modal">
-                    Fechar Modal
-                </a>
-
-                <div class="modal-content">
-                    <iframe src="" frameborder="0"></iframe>
-                </div>
-            </div>
-        </div>
+        
 
         <div class="footer">
             <p>
-                Todos direitos Reservados / FoodFy</p>
+                Todos direitos Reservados / FoodFy <a href="/admin/recipes">Admin</a></p>
 
         </div>
 

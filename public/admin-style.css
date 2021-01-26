@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --primary-color: #FBDFDB;
+    --primary-color: #999999;
     --secundary-color: #111111;
     --back: #ffffff;
     --delete: #DC4747;
+    --links: #6558C3;
 }
 *{
     padding: 0;
     margin: 0;
     border: 0;
 }
-
+/* Layout Inicio -------------------------------------- */
 body {
     background: var(--back);
     color: var(--secundary-color);
@@ -26,14 +27,17 @@ header {
 .logo{
     margin-left: 20%;
 }
+.logo a {
+    padding: 0px;
+}
 .links{
     padding: 0px 50px 0px 50px;
-   
+    font-family: 'Roboto';
+    size: 15px;
+    font-weight: bold;
 }
 .links a {
-    font-family: 'Roboto';
-    font-weight: bold;
-    color: var(--back);
+    color: var(--primary-color);
     text-decoration: none;
     padding: 0px 20px 0px 20px;
 }
@@ -42,36 +46,46 @@ header {
     width: 60%;
     height: auto;
     background: var(--back);
-    padding: 50px 0px 50px 0px;
-   
-
+    padding: 30px 0px 30px 0px;
 }
-.container-tb{
+.footer{
+    font-family: 'Roboto Regular';
     width: 100%;
-    height: 50px;
+    background: var(--secundary-color);
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: var(--back);
+    position: absolute;
+}
+/* Layout FIM  -------------------------------------- */
+
+/* Receitas Inicio  --------------------------------------   */
+
+/* Titulos & Botões */
+.container-topo{
+    width: 100%;
+    height: 30px;
     align-items: center;
-    padding: 10px 0px 10px 0px;
+    padding: 20px 0px 40px 0px;
     display: inline-flex;
 }
-.container-t{
+.container-title{
     width: 60%;
-}
-.container-bt{
-
-    width: 40%;
-}
-
-h1 {
     font-family: 'Roboto';
     font-weight: bold;
     font-size: 24px;
-    color: #111111;
+    color: var(--secundary-color);
+}
+.container-botao{
+    width: 40%;
 }
 .btn{
     float: right;
+    
     border-radius: 4px;
     font-weight: bold;
-    background-color: #6558C3;
+    background-color: var(--links);
     padding: 10px 10px 10px 10px;
     font-family: 'Roboto';
     font-size: 16px;
@@ -89,24 +103,12 @@ h1 {
 }
 .red{
     background-color: var(--delete);
-    margin-top: 25px;
 
 }
+/* Titulos & Botões - FIM */
 
 
-
-.footer{
-    font-family: 'Roboto Regular';
-    width: 100%;
-    background: var(--secundary-color);
-    text-align: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    color: var(--primary-color);
-    position: absolute;
-    
-}
-
+/* Apresentação das receitas */
 .cards {
     max-width: 100%;
     margin: 0 auto;
@@ -119,34 +121,28 @@ h1 {
 .card {
     display: grid;
     grid-template-columns: 1fr 1fr ;
-    
-    
 }
 .card-img img {
     width: 100%;
-    
-    height: 111px;
+    height: 130px;
     border-radius: 15px;
-    box-shadow: 5px 5px 12px -4px black;    
+    box-shadow: 4px 4px 16px -4px var(--secundary-color);    
 }
 .card-img{
     grid-area: img;
-    
-    
 }
 .card-title {
     grid-area: title;
     font-family: 'Roboto';
     font-size: 18px;
-    color: #111111;
+    color: var(--secundary-color);
     padding-left: 15px;
 }
-
 .cardby {
     grid-area: by;
     font-family: 'Roboto';
     font-size: 14px;
-    color: #777777;
+    color: var(--primary-color);
     padding-left: 15px;
 }
 .card-link, a {
@@ -155,65 +151,81 @@ h1 {
     font-family: 'Roboto';
     font-weight: bold;
     font-size: 14px;
-    color: #6558C3;
+    color: var(--links);
     padding-left: 15px;
 }
-
 .grid-template-areas {
     grid-template-areas: 
         "img title"
         "img by"
         "img link"; 
 }
+/* Apresentação das receitas - FIM */
+/* Receitas FIM  --------------------------------------   */
 
+
+/* FORMS  */
 .fields {
     width: 100%;
     height: auto;
     min-height: 100px;
-    
+    font-family: 'Roboto';
 }
-
+input, select{
+    width: 100%;
+    height: 49px;
+    outline: none;
+    margin: 10px 0px 20px 0px;
+    background-color: var(--back);
+    font-size: 16px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+.timeandprepar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.timeandprepar .item input {
+    width: 97%;
+}
 .item p {
     font-family: 'Roboto';
     font-weight: bold;
     font-size: 16px;
-    color: #111111;
-    margin-top: 25px;
+    color: var(--secundary-color);
 }
-
 .item input {
-    width: 100%;
+    font-family: 'Roboto';
+    width: 99%;
     height: 49px;
-    background: #FFFFFF;
+    background: var(--back);
     border: 1px solid #DDDDDD;
     border-radius: 4px;
-    margin-top: 10px;
+    margin: 10px 0px 20px 0px;
     padding-left: 10px;
-    
 }
 
 .item input::placeholder {
     font-size: 14px;
-    padding-left: 10px;
-
+    font-weight: normal;
 }
 
 .add-input {
     font-family: 'Roboto';
     font-weight: bold;
     font-size: 16px;
-    color: #6558C3;
-    margin-top: 10px;
+    color: var(--links);
     background-color: var(--back);
     cursor: pointer;
-    
+    margin-bottom: 20px;
 }
-
 .item-descricao {
     font-family: 'Roboto';
     min-height: 200px;
     width: 100%;
     height: 49px;
+    font-size: 16px;
     background: #FFFFFF;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
@@ -221,74 +233,164 @@ h1 {
     line-height: 20px;
     padding: 10px;
 }
+/* FORMS - FIM */
 
-
+/* Pagina SHOW*/
 
 .banner-show img {
     width: 100%;
     height: 280px;
     border-radius: 15px;
-    box-shadow: 5px 5px 12px -4px black;
     margin-bottom: 40px;
 }
-
 .banner-show h1 {
     font-family: 'Roboto';
     font-size: 36px;
     font-weight: bold;
-    color: #111111;
+    color: var(--secundary-color);
     text-align: center;
 }
-
 .banner-show p {
     font-family: 'Roboto Regular';
     font-size: 20px;
     color: #777777;
     text-align: center;
 }
-
-.descripition {
+.container_datails {
     width: 100%;
     height: auto;
-    padding: 50px 0px 50px 0px;
+    padding: 20px 0px 20px 0px;
     font-family: 'Roboto';
     font-size: 18px;
     color: #444444;
     line-height: 28px;
 }
-
-.descripition h2 {
+.container_datails h2 {
     font-family: 'Roboto';
-    font-size: 30px;
-    color: #111111;
+    font-size: 24px;
+    color: var(--secundary-color);
     font-weight: bold;
-    
+    margin-right: 5px;
 }
-.descripition ul {
+.container_datails ul {
     padding-left: 20px;
 }
-
 .hidden {
     display: block;
 }
-
 .ttitle {
     margin: 25px 0px 25px 0px;
     display: inline-flex;
+    
 }
-
-.descripition-ct {
-    display: block;
+.descripition-recipes {
+    width: 100%;
 }
-
 .bts {
     background-color: #FFF;
+    width: 100px;
+    height: 15px;
     font-family: 'Roboto';
     font-weight: bold;
     font-size: 12px;
     color: #999999;
     cursor: pointer;
     text-align: center;
+}
+
+/* Pagina SHOW - FIM */
+
+/* Listagem Chefs - FIM */
+
+.cards_container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card_chef {
     
-    padding: 10px 10px 10px 10px;
+}
+.chef-img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    padding: 8px;
+}
+.chef-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+}
+
+.cardinfos{
+    width: auto;
+    height: auto;
+    float: left;
+}
+.chef_name p {
+    
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: var(--secundary-color);
+    margin: 25% 0% 10% 0%;
+  
+}
+.visualiza_chef a {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--links);
+    padding: 0px;
+    
+}
+
+input[type="radio"] {
+    width: 30px;
+    text-align: center;
+    margin: 10px;
+    color: var(--primary-color);
+}
+
+
+span {
+    padding: 8px 8px;
+    background-color: var(--back);
+    color: var(--secundary-color);
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: top;
+}
+
+.banner-chef{
+    width: 100%;
+    height: 300px;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-chef img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.banner-chef h1 {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 36px;
+    color: #111111;
+}
+.banner-chef p {
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: #777777;
+    text-align: center;
 }

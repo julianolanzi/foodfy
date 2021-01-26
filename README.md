@@ -16,7 +16,7 @@ Reiniciando servidor auto --> npm install -D nodemon // reiniciar servidor autom
 Na função em server.js incluir 
 
 
-instalando method override -> npm install method-override fun;'ao de put e delete nos forms
+instalando method override -> npm install method-override funçãao de put e delete nos forms
 
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -32,6 +32,9 @@ parte do script :
     "start": "npm-run-all -p nodemon browsersync ",
     "nodemon": "nodemon server.js ",
     "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public,views'"
+
+
+    comando para adicionar uma tabela --> ALTER TABLE recipes ADD COLUMN  ingredients  text[];
   },
 
 

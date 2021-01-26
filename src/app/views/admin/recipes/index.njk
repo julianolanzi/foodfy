@@ -1,44 +1,40 @@
 {% extends "admin/layout.njk" %}
 
 {%block head%}
-    <title>
-        Admin FoodFy - Gerenciar Receitas</title>
-    {%endblock%}
+    <title>Admin - Gerenciar Receitas</title>
+{%endblock%}
 
-    {% block content %}
+{% block content %}
 
-        <section class="container-tb">
-            <div class="container-t">
+        <section class="container-topo">
+            <div class="container-title">
                 <h1>Gerenciar Receitas</h1>
             </div>
-            <div class="container-bt">
-                
+            <div class="container-botao">
                 <a class="btn" href="/admin/recipes/create">
-                    <i class="fas fa-save"></i>
-                    Criar receira</a>
+                    <i class="fas fa-plus-square"></i>
+                    Criar Receita
+                </a>
             </div>
         </section>
 
-        
-            <div class="cards">
-                {% for recipe in recipes %}
+        <div class="cards">
+            {% for recipe in recipes %}
                 <div class="card grid-template-areas">
-                    
+
                     <div class="card-img"><img src="{{ recipe.imagem_url }}" styele=" wi" alt="{{ recipe.title }}"></div>
                     <div class="card-title">
                         <p>{{ recipe.title }}</p>
                     </div>
                     <div class="cardby">
-                        <p>{{ recipe.autor }}</p>
+                        <p>por {{ recipe.title }}</p>
                     </div>
                     <div class="link">
                         <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
                     </div>
-                    
+
                 </div>
             {% endfor %}
-            </div>
+        </div>
 
-        
-
-    {% endblock %}
+{% endblock %}

@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: #FBDFDB;
+    --footer: #EEEEEE;
 }
 *{
     padding: 0;
@@ -197,7 +198,7 @@ iframe {
 .footer{
     font-family: 'Roboto Regular';
     width: 100%;
-    background: var(--primary-color);
+    background: var(--footer);
     text-align: center;
     padding-top: 1%;
     padding-bottom: 1%;

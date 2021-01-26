@@ -1,0 +1,67 @@
+<div class="item">
+    <p>Nome</p>
+    <div>
+        <input type="text" name="name" placeholder="Nome" value="{{chef.name}}">
+    </div>
+</div>
+
+<div class="item">
+    <p>Imagem</p>
+    <div>
+        <input type="text" name="avatar_url" placeholder="http://" value=" {{chef.avatar_url}}">
+    </div>
+</div>
+
+<div class="item">
+    <p>Idade</p>
+    <div>
+        <input type="date" name="birth" placeholder="Idade" value="{{chef.birth}}">
+    </div>
+</div>
+
+<div class="item">
+    <p>Especialidade</p>
+    <div>
+        <select class="custom-select" name="especial_recipe">
+            <option value="M" {% if chef.especial_recipe == "M" %} selected="selected" {% endif %}>
+                Massas / Pizzas
+            </option>
+            <option value="O" {% if chef.especial_recipe == "O" %} selected="selected" {% endif %}>
+                Oriental
+            </option>
+            <option value="C" {% if chef.especial_recipe == "C" %} selected="selected" {% endif %}>
+                Churrasco
+            </option>
+            <option value="V" {% if chef.especial_recipe == "V" %} selected="selected" {% endif %}>
+                Vegano
+            </option>
+
+        </select>
+    </div>
+</div>
+
+<div class="item">
+    <p>Sexo</p>
+    <div>
+        <span><input type="radio" name="gender" value="M" {% if chef.gender == 'M' %} checked="checked" {% endif %}>
+            Masculino
+        </span>
+        <span><input type="radio" name="gender" value="F" {% if chef.gender == 'F' %} checked="checked" {% endif %}>
+            Feminino
+        </span>
+    </div>
+</div>
+
+<div class="item">
+    <p>Cep</p>
+    <div>
+        <input type="number" name="cep" placeholder="Cep" value="{{chef.cep}}">
+    </div>
+</div>
+
+<div class="item">
+    <p>Endereço</p>
+    <div>
+        <input type="text" name="address" placeholder="Endereço" value=" {{chef.address}}">
+    </div>
+</div>

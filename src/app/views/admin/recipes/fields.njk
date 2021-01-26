@@ -1,0 +1,75 @@
+<div class="item">
+    <p>Imagem da receita</p>
+    <div>
+        <input type="text" name="imagem_url" placeholder="http://" value="{{recipe.imagem_url}}">
+    </div>
+</div>
+
+<div class="item">
+    <p>Titulo</p>
+    <div>
+        <input type="text" name="title" placeholder="Titulo" value="{{recipe.title}}">
+    </div>
+</div>
+
+<div class="item">
+    <p>Chef</p>
+    <div>
+        <select name="chef_id">
+            {%for chef in chefOptions %}
+                <option value="{{chef.id}}" {% if recipes.chef_id == chef.name %} selected="selected" {% endif %}>
+                    {{chef.name}}
+                </option>
+                {%endfor%}
+            </select>
+        </div>
+    </div>
+
+    <div class="timeandprepar">
+        <div class="item">
+            <p>Tempo de preparação</p>
+            <div>
+                <input type="number" name="time_preparation" placeholder="Tempo de preparação em mim" value="{{recipe.time_preparation}}">
+            </div>
+        </div>
+
+        <div class="item">
+            <p>Receita serve quantas pessoas ?</p>
+            <div>
+                <input type="number" name="eat_people" placeholder="Numero de pessoas" value="{{recipe.eat_people}}">
+            </div>
+        </div>
+    </div>
+
+    <div id="ingredients" class="item">
+        <p>Ingredientes</p>
+        {% for ingredient in recipe.ingredients %}
+            <div class="ingredient">
+
+                <input type="text" name="ingredients[]" placeholder="Ingrediente" value="{{ingredient}}"/>
+
+            </div>
+            {%endfor%}
+
+        </div>
+
+        <button type="button" class="add-input" name="ingredient">Adicionar Ingrediente</button>
+
+        <div id="preparation" class="item">
+            <p>Preparação</p>
+            {% for prepara in recipe.preparation %}
+                <div class="step">
+                    <input type="text" name="preparation[]" placeholder="Passo" value="{{prepara}}"/>
+                </div>
+                {%endfor%}
+
+            </div>
+
+            <button type="button" class="add-input" name="step">Aicionar novo passo</button>
+
+            <div class="item">
+                <p>Informações adicionais</p>
+                <div>
+                    <textarea class="item-descricao" type="text" name="information" cols="30" rows="10">{{recipe.information}}</textarea>
+                </div>
+            </div>

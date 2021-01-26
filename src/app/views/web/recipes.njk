@@ -1,14 +1,14 @@
-{% extends "layout.njk" %}
+{% extends "web/layout.njk" %}
 
 {%block head%}
     <title>FoodFy - Receitas</title>
-    {%endblock%}
+{%endblock%}
 
-    {% block content %}
+{% block content %}
 
         <section class="cards">
 
-           {% for recipe in recipes %}
+            {% for recipe in recipes %}
                 <div class="card" id="{{recipes.id}}">
                     <div class="card-img-container">
                         <img width="600px" height="280px" src="{{recipe.imagem_url}}" alt="Videos Aulas">
@@ -24,6 +24,6 @@
 
                 {%endfor%}
 
-        </section>
+            </section>
 
-        {% endblock %}
+{% endblock %}

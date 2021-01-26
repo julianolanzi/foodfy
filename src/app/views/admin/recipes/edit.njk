@@ -2,18 +2,18 @@
 
 {%block head%}
     <title>
-        Admin FoodFy - Editar Receita</title>
+        Admin - Editar / {{recipe.title}}</title>
 {%endblock%}
 
 {% block content %}
-    <section class="container-tb">
-                <div class="container-t">
+    <section class="container-topo">
+                <div class="container-title">
                     <h1>Editar Receita</h1>
                 </div>
-                <div class="container-bt">
+                <div class="container-botao">
                     
-                </div>
-    </section>
+                
+    
 
         <form id="form-delete" action="/admin/recipes?_method=DELETE"method="POST">
                 <input type="hidden" name="id" value="{{ recipe.id }}">
@@ -22,7 +22,9 @@
         </form>
         <form action="/admin/recipes?_method=PUT" method="POST">
                 <button type="submit" class="btn"><i class="fas fa-save"></i> Salvar receita</button>
-
+                
+        </div>
+        </section>
 
             <section class="fields">
                     {% include 'admin/recipes/fields.njk' %}
